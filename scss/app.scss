@@ -1,0 +1,294 @@
+@import "_reset" , '_mixins';
+
+/* Estilos generales */
+.wrapper {
+  width: 90%;
+  max-width: 75em;
+  margin: auto;
+}
+
+/* Cabecera */
+.Header {
+    width: 100%;
+    background-color: rgba( 255,255,255,.2);
+    margin: 0 0 1em;
+    padding: .5em 0 ;
+    color: white;
+    text-shadow: 0 0 1.5em black;
+
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    
+    backdrop-filter: blur(2em);
+
+    @include media( 800px ){
+      font-size: .85em;
+    }
+
+    &-wrapper {
+      max-width: 75rem;
+      @include flex( flex , row , wrap , space-between , center );
+      font-size: .8em;
+    }
+
+    &-menu{
+      display: none;
+      @include media(){
+        display: block;
+      }
+      order: 1;
+    }
+    &-hamburguesa {
+        width: 3em;
+        height: 3em;
+        
+    }
+
+    &-h1{
+        max-width: 10rem;
+        @include flex ( flex , row , nowrap , center , center );
+        @include media(){
+          display: none;
+        }
+    }
+
+    &-nav{
+        @include flex( flex , row , nowrap , center , center);
+        @include media(){
+          order: 3;
+          width: 100%;
+          height: 0vh;
+          transition: all .5s ease;
+          opacity: 0;
+          pointer-events: none;
+          
+          &.active{
+            height: 60vh;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+    }
+
+    &-ul{
+      padding: 1em;
+      @include flex( flex , row  , nowrap , center , center );
+      @include media(){
+        flex-direction: column;
+      }
+    }
+    
+    &-li{
+      margin: 0 1em;
+      position: relative;
+      text-align: center;
+
+      cursor: pointer;
+      
+      &:hover .Header-submenu{
+        opacity: 1;
+        transform: translateY(0%);
+        pointer-events: auto;
+      }
+    
+      @include media(){
+        margin: 1em 0;
+        width: 100%;
+      }
+    }
+    
+    &-submenu{
+      position: absolute;
+
+      background-color: rgba(0,0,0,1);
+      backdrop-filter: blur(50px);
+      padding: 0;
+      margin: 0px;
+
+      opacity: 0;
+      pointer-events: none;
+
+      transition: all .5s ease;
+      transform: translateY(-10%);
+
+      &.active , &:hover{
+        opacity: 1;
+        position: absolute;
+        margin: 1em 0 0;
+        @include media(){
+          position: relative;
+        }
+      }
+    }
+    &-subli {
+      padding: .5em 3em;
+
+    }
+
+    &-img{}
+    &-link{
+      width: 100%;
+      padding: 1em 0;
+      color: white;
+      text-decoration: none;
+    }
+    &-logo{}
+}
+
+.main {
+  &-section {
+  }
+}
+
+.Intro {
+  min-height: 70vh;
+  background: url(../assets/fondo.jpg) no-repeat center center / cover fixed;
+
+  @include flex( flex , column , nowrap , center , center );
+  color: white;
+
+
+  &-wrapper {
+    width: 90%;
+    max-width: 33.75em;
+    @include media(){
+    max-width: 15em;
+    }
+  }
+  
+  &-logo {
+    max-width: 5em;
+    min-height: 5em;
+    margin: 0 auto 2.5rem;
+  }
+  &-ul {
+    @include flex( flex , row , nowrap , space-between , center );
+
+    @include media(){
+      flex-direction: column;
+    }
+  }
+  &-li {
+    flex-basis: calc( 50% - 1em );
+
+    @include media(){
+      flex-basis:  initial;
+      width: 100%;
+      margin:  0 1em;
+    }
+  }
+
+  &-a {
+    padding: 1em 0;
+    @include flex ( flex , row , nowrap , center , center );
+    color: white;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    text-decoration: none;
+  }
+  &-svg {
+    width: 2em;
+    height: 2em;
+    fill: white;
+  }
+  &-span {
+    margin: 0 0 0 .5em;
+    text-decoration: none;
+  }
+  &-img {
+  }
+  
+}
+
+
+.carteles {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+  &-wrapper {
+    position: relative;
+    top: -2em;
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr ); 
+    gap: 3em;
+  }
+
+    &-a {
+  }
+  &-img {
+    min-height: 10rem;
+  }
+}
+.Planes {
+  background-color: lightgrey;
+  &-wrapper {
+    background-color: aqua;
+  }
+  &-banner {
+    padding: 1em 0;
+  }
+  &-link {
+  }
+  &-gif {
+    min-height: 5em;
+  }
+
+  &-h2{
+    background-color: green;
+    @include flex( flex , column , nowrap , center , center);
+    margin: 0 0 1em;
+    &::after{
+      content: '';
+      display: inline-flex;
+      width: 100%;
+      max-width: 10em;
+      min-height: .2em;
+      background-color: black;
+    }
+
+  }
+
+  &-grid {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat( 2, 1fr);
+    gap: 1em;
+  }
+  &-li {
+  }
+  &-info {
+  }
+  &-cover {
+  }
+  &-h3 {
+  }
+  &-numero {
+  }
+
+  &-more {
+  }
+}
+
+.footer {
+    background-color: lightgrey;
+    &-grupo-1 {
+  }
+  &-box {
+  }
+  &-img {
+  }
+  &-red {
+  }
+  &-grupo-2 {
+  }
+}
+
+.Sidebar {
+    background-color: lightgrey;
+    display: none;
+    &-a {
+  }
+  &-svg {
+  }
+}
