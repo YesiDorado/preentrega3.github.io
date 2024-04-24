@@ -444,3 +444,52 @@
   background-color: lightgrey;
   display: none;
 }
+
+.body{
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gris);
+}
+/*Sobre mi*/
+.sobremi{
+  &-section{
+    background: url(../assets/sobremi.jpg) no-repeat left;
+    background-size: 60%;
+    background-color: var(--blanco);
+    overflow: hidden;
+    padding: 10em ;
+  }
+  &-contenedor{
+    width: 55%;
+    float: right;
+    background-color: var(--blanco);
+    padding: 3em;
+  }
+  &-h2{
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  &-h3{
+    font-weight: 500;
+  }
+  &-p{
+    font-size: .5em;
+  }
+  &-mas{}
+  &-a{
+    max-width: 10em;
+    display: inline-flex;
+    justify-content: center;
+    border: .1em solid rgb(238, 174, 202);
+    border-radius: 10px;
+    margin: 0 2em;
+    padding: 0.5em 1em;
+    text-align: center;
+    color: rgb(238, 174, 202);
+
+  }
+
+}
