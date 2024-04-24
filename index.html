@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vero Fitness</title>
     <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Vero Fitness</title>
-    <link rel="stylesheet" href="scss/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/app.css" />
 </head>
 <body>
+
+    <div class="Preload">
+        <img class="Preload-img" src="assets/logo.png" alt="Vero Fitness">
+    </div>
 
     <ul class="Sidebar">
         <li class="Sidebar">
@@ -38,7 +45,7 @@
                 </a>
             </h1>
         
-            <nav class="Header-nav active">
+            <nav class="Header-nav">
                 <ul class="Header-ul">
                     <li class="Header-li"><a class="Header-link" href="#" title="Inicio">Inicio</a></li>
                     <li class="Header-li"><a class="Header-link" href="page/sobremi.html" title="sobre mi">Sobre mi</a></li>
@@ -49,6 +56,7 @@
                         <ul class="Header-submenu">
                             <li class="Header-subli"><a class="Header-info" href="page/nutricion.html" title="nutri">Nutrición</a></li>
                             <li class="Header-subli"><a class="Header-info" href="page/training.html" title="nutri">Training</a></li>
+                            <li class="Header-subli"><a class="Header-info" href="page/contacto.html" title="nutri">Contacto</a></li>
                         </ul>
                     </li>    
                 </ul>
@@ -60,18 +68,21 @@
 
                 <section class="main-section Intro">
                     <div class="Intro-wrapper wrapper">
+
+                        <video class="Intro-video" autoplay loop muted src="assets/gym.mp4"></video>
+
                         <h2 class="Intro-logo">
                             <img class="Intro-img" src="assets/logo.png" alt="Vero Fitness">
                         </h2>
                         <ul class="Intro-ul">
                             <li class="Intro-li">
-                                <a class="Intro-a" href="page/training.html" title="Training">
+                                <a class="Intro-a Intro-a--train" href="page/training.html" title="Training">
                                     <svg class="Intro-svg" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"><path d="m23.121 7.122-2.414-2.415 2-2-1.414-1.414-2 2-2.414-2.414a3 3 0 0 0 -4.243 0l-2.828 2.828 4.535 4.536-6.1 6.1-4.536-4.535-2.828 2.828a3 3 0 0 0 0 4.242l2.414 2.415-2 2 1.414 1.414 2-2 2.414 2.414a3 3 0 0 0 4.243 0l2.828-2.828-4.535-4.536 6.1-6.1 4.535 4.535 2.828-2.828a3 3 0 0 0 0-4.242z"/></svg>
                                     <span class="Intro-span">Training</span>
                                 </a>
                             </li>
                             <li class="Intro-li">
-                                <a class="Intro-a" href="/page/nutricion.html" title="Nutricion">
+                                <a class="Intro-a Intro-a--nutri" href="/page/nutricion.html" title="Nutricion">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="Intro-svg" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M23.2,11.215a3.4,3.4,0,0,0-2.012-1.149A28.251,28.251,0,0,0,22,4.557l.062-1.632L20.43,3a26.657,26.657,0,0,0-3.986.508A2.983,2.983,0,0,0,11.421.872c-.166.166-.421.372-.421.372s-.254-.206-.421-.372a2.968,2.968,0,0,0-4.77,3.4,5.511,5.511,0,0,0-3.747,6.02A3.38,3.38,0,0,0,.048,13.964,13.415,13.415,0,0,0,7.54,23.856l.3.144h8.31l.3-.144a13.415,13.415,0,0,0,7.492-9.892A3.373,3.373,0,0,0,23.2,11.215ZM18.057,10H13.045a2.718,2.718,0,0,1,.707-2.237c.774-.8,3.075-1.349,5.108-1.61A19.28,19.28,0,0,1,18.057,10ZM7.5,7a2.49,2.49,0,0,1,2.437,3H5.063A2.49,2.49,0,0,1,7.5,7Zm7.971,14H8.529a10.421,10.421,0,0,1-5.524-7.537.379.379,0,0,1,.089-.312A.421.421,0,0,1,3.418,13H20.582a.421.421,0,0,1,.324.151.376.376,0,0,1,.089.312A10.421,10.421,0,0,1,15.471,21Z"/></svg>
                                     <span class="Intro-span">Nutrición</span>
                                 </a>
@@ -82,10 +93,10 @@
 
                 <div class="main-section carteles">
                     <div class="carteles-wrapper wrapper">
-                        <a class="carteles-a" href="#" title="cartel de fit">
+                        <a class="carteles-a carteles-a--train" href="#" title="cartel de fit">
                             <img class="carteles-img" src="assets/mejorada.jpg" alt="cartel de fit">
                         </a>
-                        <a class="carteles-a" href="#" title="cartel de fit">
+                        <a class="carteles-a carteles-a--nutri" href="#" title="cartel de fit">
                             <img class="carteles-img" src="assets/cartel2.jpg" alt="cartel de fit">
                         </a>
                     </div>
@@ -95,7 +106,7 @@
                     <div class="Planes-wrapper wrapper">
                         <div class="Planes-banner">
                             <a class="Planes-link" href="#" title="vibra vibra">
-                                <img class="Planes-gif" src="#" alt="vibra vibra">
+                                <img class="Planes-gif" src="assets/banner.jpg" alt="vibra vibra">
                             </a>
                         </div>
 
@@ -103,31 +114,27 @@
 
                         <ul class="Planes-grid">
                             <li class="Planes-li">
-                                <a href="#" class="Planes-info">
-                                    <img src="" alt="" class="Planes-cover">
-                                    <h3 class="Planes-h3">lorem</h3>
-                                    <small class="Planes-numero">6500</small>
+                                    <img src="assets/IMG-20240207-WA0021.jpg" alt="" class="Planes-cover">
+                                    <h3 class="Planes-h3">1 SESION</h3>
+                                    <small class="Planes-numero">$20.000</small>
                                 </a>
                             </li>
                             <li class="Planes-li">
-                                <a href="#" class="Planes-info">
-                                    <img src="" alt="" class="Planes-cover">
-                                    <h3 class="Planes-h3">lorem</h3>
-                                    <small class="Planes-numero">6500</small>
+                                    <img src="assets/img2.jpg" alt="" class="Planes-cover">
+                                    <h3 class="Planes-h3">5 SESIONES</h3>
+                                    <small class="Planes-numero">$90.000</small>
                                 </a>
                             </li>
                             <li class="Planes-li">
-                                <a href="#" class="Planes-info">
-                                    <img src="" alt="" class="Planes-cover">
-                                    <h3 class="Planes-h3">lorem</h3>
-                                    <small class="Planes-numero">6500</sma>
+                                    <img src="assets/img3.jpg" alt="" class="Planes-cover">
+                                    <h3 class="Planes-h3">10 SESIONES</h3>
+                                    <small class="Planes-numero">$150.000</small>
                                 </a>
                             </li>
                             <li class="Planes-li">
-                                <a href="#" class="Planes-info">
-                                    <img src="" alt="" class="Planes-cover">
-                                    <h3 class="Planes-h3">lorem</h3>
-                                    <small class="Planes-numero">6500</small>
+                                    <img src="assets/img4.jpg" alt="" class="Planes-cover">
+                                    <h3 class="Planes-h3">20 SESIONES</h3>
+                                    <small class="Planes-numero">$250.000</small>
                                 </a>
                             </li>
                         </ul>
@@ -139,37 +146,32 @@
 
             </main>
 
-            <footer class="footer">
-                <div class="footer-grupo-1">
-                    <div class="footer-box">
-                        <img class="footer-img" src="assets/logo.png">
-                            <p>Veronica Laccedra
-                            <br> Fitness
-                            </p>
-                    </div>
-                    <div class="footer-box">
-                        <h2>Empezá hoy</h2>
-                        <a href="#">Planes</a>
-                        <a href="#">Training</a>
-                        <a href="#">Nutrición</a>
-                    </div>
-                    <div class="footer-box">
-                        <h2>Seguime</h2>
-                        <div class="footer-red">
-                            <a href="https://www.facebook.com/veronica.laccedra.5" class="fi fi-brands-facebook"></a>
-                            <a href="https://www.instagram.com/vero_laccedra_/" class="fi fi-brands-instagram"></a>
-                        </div>
-                    </div>
+            <footer class="Footer">
+                <div class="Footer-wrapper wrapper">
+                    <ul class="Footer-info">
+                        <li class="Footer-li"><a class="Footer-a" href="#" title="Inicio">Inicio </a></li>
+                        <li class="Footer-li"><a class="Footer-a" href="page/sobremi.html" title="Sobremi">Sobre Mi </a></li>
+                        <li class="Footer-li"><a class="Footer-a" href="page/experiencias.html" title="Experiencias">Experiencias</a></li>
+                        <li class="Footer-li"><a class="Footer-a" href="page/info.html" title="Info">Info</a></li>
+                        <li class="Footer-li"><a class="Footer-a" href="page/training.html" title="Training">Traning</a></li>
+                        <li class="Footer-li"><a class="Footer-a" href="page/nutricion.html" title="Nutricion">Nutrición</a></li>
+                    </ul>
                 </div>
-                <div class="footer-grupo-2">
-                    <small>&copy; 2024 <b>Veronica Laccedra Fitness</b> - Todos los Derechos Reservados.</small>
+                <div class="Footer-contactos">
+                    <div class="Footer-wrapper wrapper">
+                        <dl class="Footer-dl">
+                            <dd class="Footer-dd"><a href="#" class="Footer-link" title="Item"><img src="assets/logochico.png" alt="Item" class="Footer-img" loading="lazy"></a></dd>
+                        </dl>
+                        <dl class="Footer-dl">
+                            <dt class="Footer-dt"><small>&copy; 2024 <b>Veronica Laccedra Fitness</b> - Todos los Derechos Reservados.</small></dt>
+                        </dl>
+                        <dl class="Footer-dl">
+                            <dt class="Footer-dt">Created by Yesica Dorado</dt>
+                        </dl>
+                    </div>
                 </div>
             </footer>
-
-    <!-- boostrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
+        
 
 </body>
 </html>
