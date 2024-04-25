@@ -454,18 +454,29 @@
 }
 /*Sobre mi*/
 .sobremi{
+  transition: all ease-in-out;
   &-section{
     background: url(../assets/sobremi.jpg) no-repeat left;
-    background-size: 60%;
+    background-size : 60%;
     background-color: var(--blanco);
     overflow: hidden;
     padding: 10em ;
+
+    @include media(){
+      background-size: 100%;
+      padding: 100px 40px;
+    }
   }
   &-contenedor{
     width: 55%;
     float: right;
     background-color: var(--blanco);
     padding: 3em;
+
+    @include media(){
+      width: 100%;
+
+    }
   }
   &-h2{
     margin-bottom: 1em;
@@ -478,7 +489,7 @@
   &-p{
     font-size: .5em;
   }
-  &-mas{}
+
   &-a{
     max-width: 10em;
     display: inline-flex;
@@ -489,7 +500,22 @@
     padding: 0.5em 1em;
     text-align: center;
     color: rgb(238, 174, 202);
+    transition: background-color 0.5s ease-in-out;
 
+    &:hover{
+      background: linear-gradient(
+        90deg,
+        rgba(238, 174, 202, 0.6) 0%,
+        rgba(148, 187, 233, 0.6) 100%
+      );
+      
+      
+
+    }
+
+    @include media(){
+      display: block;
+    }
   }
 
 }

@@ -647,6 +647,9 @@ body {
 }
 
 /*Sobre mi*/
+.sobremi {
+  transition: all ease-in-out;
+}
 .sobremi-section {
   background: url(../assets/sobremi.jpg) no-repeat left;
   background-size: 60%;
@@ -654,11 +657,22 @@ body {
   overflow: hidden;
   padding: 10em;
 }
+@media screen and (max-width: 700px) {
+  .sobremi-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  }
+}
 .sobremi-contenedor {
   width: 55%;
   float: right;
   background-color: var(--blanco);
   padding: 3em;
+}
+@media screen and (max-width: 700px) {
+  .sobremi-contenedor {
+    width: 100%;
+  }
 }
 .sobremi-h2 {
   margin-bottom: 1em;
@@ -681,4 +695,13 @@ body {
   padding: 0.5em 1em;
   text-align: center;
   color: rgb(238, 174, 202);
+  transition: background-color 0.5s ease-in-out;
+}
+.sobremi-a:hover {
+  background: linear-gradient(90deg, rgba(238, 174, 202, 0.6) 0%, rgba(148, 187, 233, 0.6) 100%);
+}
+@media screen and (max-width: 700px) {
+  .sobremi-a {
+    display: block;
+  }
 }/*# sourceMappingURL=app.css.map */
