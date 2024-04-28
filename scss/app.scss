@@ -500,22 +500,87 @@
     padding: 0.5em 1em;
     text-align: center;
     color: rgb(238, 174, 202);
-    transition: background-color 0.5s ease-in-out;
+    transition: 0.4s;
 
     &:hover{
-      background: linear-gradient(
-        90deg,
-        rgba(238, 174, 202, 0.6) 0%,
-        rgba(148, 187, 233, 0.6) 100%
-      );
-      
-      
-
+      border: 3px solid rgb(238, 174, 202);
+      transform: translateY(-10px);
     }
 
     @include media(){
       display: block;
     }
   }
+
+}
+
+.experiencias{
+  &-box{
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    img{
+      width: 20rem;
+      border: 3px solid rgb(238, 174, 202);
+      box-shadow: 0 0 10px var(--negro);
+    }
+
+  }
+  &-text{
+    margin: 10rem 0 5rem;
+    font-size: 3rem;
+    color: gray;
+  }
+  &-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include media(){
+      grid-template-columns: 1fr;
+    }
+  }
+  &-item{
+    min-height: 550px;
+    max-width: 450px;
+    background: linear-gradient(90deg, rgba(238, 174, 202, 0.6) 0%, rgba(148, 187, 233, 0.6) 100% );
+    border: 3px solid var(--gris);
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 30px 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.4s;
+    
+      &:hover{
+        border: 3px solid rgb(238, 174, 202);
+        transform: translateY(-10px)scale(1.03);
+        box-shadow: 0 0 50px var(--negro);
+      }
+
+      h3{
+        font-size: 2rem;
+      }
+
+      p{
+        font-size: 1rem;
+      }
+  }
+#star{
+  color: gold;
+  font-size: 1.5rem;
+}
+  
+
+
 
 }
