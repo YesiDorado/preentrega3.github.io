@@ -739,3 +739,26 @@
         }
       }
 }
+
+.training{
+  @include flex(flex, row, nowrap, center, center);
+
+  &-card{
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px black;
+    overflow: hidden;
+  }
+  video{
+    height: 500px;
+    width: 350px;
+    border-radius: 3px;
+  }
+  &-text{
+    height: 200px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+  }
+}

@@ -911,4 +911,29 @@ body {
 }
 .contacto-btn:active {
   transform: scale(0.9);
+}
+
+.training {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.training-card {
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+.training video {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+}
+.training-text {
+  height: 200px;
+  width: 350px;
+  padding: 6px;
+  box-sizing: border-box;
+  position: absolute;
 }/*# sourceMappingURL=app.css.map */
